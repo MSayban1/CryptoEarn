@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - CryptoEarn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="CryptoEarn Logo">
+                <span>CryptoEarn</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ptc-ads.html">View Ads</a></li>
+                <li><a href="withdraw.html">Withdraw</a></li>
+                <li><a href="referrals.html">Referrals</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
+                <li><a href="homepage.html" class="btn btn-logout">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">JD</div>
+                <h3>JohnDoe</h3>
+                <p>Balance: 0.001245 BTC</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><span>📊</span> Dashboard</a></li>
+                    <li><a href="ptc-ads.html"><span>🖱️</span> View Ads</a></li>
+                    <li><a href="withdraw.html"><span>💰</span> Withdraw</a></li>
+                    <li><a href="referrals.html"><span>👥</span> Referrals</a></li>
+                    <li><a href="settings.html" class="active"><span>⚙️</span> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Account Settings</h1>
+                <p>Manage your account information and security</p>
+            </div>
+            
+            <div class="settings-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="profile">Profile</button>
+                    <button class="tab-btn" data-tab="security">Security</button>
+                    <button class="tab-btn" data-tab="notifications">Notifications</button>
+                </div>
+                
+                <div class="tab-content active" id="profile-tab">
+                    <h3>Profile Information</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" name="username" value="JohnDoe" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" value="johndoe@example.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="join-date">Join Date</label>
+                            <input type="text" id="join-date" name="join-date" value="January 15, 2023" readonly>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country">
+                                <option value="US" selected>United States</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="CA">Canada</option>
+                                <!-- More countries would be here -->
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Update Profile</button>
+                    </form>
+                </div>
+                
+                <div class="tab-content" id="security-tab">
+                    <h3>Security Settings</h3>
+                    
+                    <div class="security-section">
+                        <h4>Change Password</h4>
+                        <form>
+                            <div class="form-group">
+                                <label for="current-password">Current Password</label>
+                                <input type="password" id="current-password" name="current-password" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="new-password">New Password</label>
+                                <input type="password" id="new-password" name="new-password" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="confirm-new-password">Confirm New Password</label>
+                                <input type="password" id="confirm-new-password" name="confirm-new-password" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Change Password</button>
+                        </form>
+                    </div>
+                    
+                    <div class="security-section">
+                        <h4>Two-Factor Authentication</h4>
+                        <div class="twofa-status">
+                            <span class="status-badge disabled">Disabled</span>
+                            <p>Add an extra layer of security to your account</p>
+                            <button class="btn btn-secondary">Enable 2FA</button>
+                        </div>
+                    </div>
+                    
+                    <div class="security-section">
+                        <h4>Login History</h4>
+                        <div class="login-history">
+                            <div class="login-item">
+                                <div class="login-info">
+                                    <strong>Successful login</strong>
+                                    <span>June 20, 2023 14:30</span>
+                                </div>
+                                <div class="login-details">
+                                    <span>IP: 192.168.1.1</span>
+                                    <span>Location: New York, US</span>
+                                </div>
+                            </div>
+                            <div class="login-item">
+                                <div class="login-info">
+                                    <strong>Successful login</strong>
+                                    <span>June 19, 2023 09:15</span>
+                                </div>
+                                <div class="login-details">
+                                    <span>IP: 192.168.1.1</span>
+                                    <span>Location: New York, US</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="notifications-tab">
+                    <h3>Notification Preferences</h3>
+                    <form>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="email-news" name="email-news" checked>
+                            <label for="email-news">Email newsletters and promotions</label>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="email-ads" name="email-ads" checked>
+                            <label for="email-ads">Email when new ads are available</label>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="email-withdraw" name="email-withdraw" checked>
+                            <label for="email-withdraw">Email when withdrawals are processed</label>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="email-referral" name="email-referral" checked>
+                            <label for="email-referral">Email when referrals earn</label>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="browser-notifications" name="browser-notifications">
+                            <label for="browser-notifications">Browser notifications</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Save Preferences</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="danger-zone">
+                <h3>Danger Zone</h3>
+                <div class="danger-actions">
+                    <div class="danger-action">
+                        <h4>Delete Account</h4>
+                        <p>Permanently delete your account and all associated data</p>
+                        <button class="btn btn-danger">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CryptoEarn</h3>
+                <p>The leading PTC cryptocurrency earning platform since 2020.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="settings.html">Settings</a></li>
+                    <li><a href="referrals.html">Referrals</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 CryptoEarn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

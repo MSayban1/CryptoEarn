@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referrals - CryptoEarn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="CryptoEarn Logo">
+                <span>CryptoEarn</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ptc-ads.html">View Ads</a></li>
+                <li><a href="withdraw.html">Withdraw</a></li>
+                <li><a href="referrals.html" class="active">Referrals</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="homepage.html" class="btn btn-logout">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">JD</div>
+                <h3>JohnDoe</h3>
+                <p>Balance: 0.001245 BTC</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><span>📊</span> Dashboard</a></li>
+                    <li><a href="ptc-ads.html"><span>🖱️</span> View Ads</a></li>
+                    <li><a href="withdraw.html"><span>💰</span> Withdraw</a></li>
+                    <li><a href="referrals.html" class="active"><span>👥</span> Referrals</a></li>
+                    <li><a href="settings.html"><span>⚙️</span> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Referral Program</h1>
+                <p>Earn 20% of your referrals' earnings for life!</p>
+            </div>
+            
+            <div class="referral-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <h3>Total Referrals</h3>
+                    <p class="stat-value">5</p>
+                    <p class="stat-note">Active: 3</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <h3>Referral Earnings</h3>
+                    <p class="stat-value">0.000512 BTC</p>
+                    <p class="stat-note">≈ $17.50</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <h3>Earnings Today</h3>
+                    <p class="stat-value">0.000042 BTC</p>
+                    <p class="stat-note">From 2 referrals</p>
+                </div>
+            </div>
+            
+            <div class="referral-link-container">
+                <h3>Your Referral Link</h3>
+                <div class="referral-link-box">
+                    <input type="text" id="referral-link" value="https://cryptoearn.com/ref/johndoe" readonly>
+                    <button class="btn btn-primary" onclick="copyReferralLink()">Copy</button>
+                </div>
+                <p>Share this link with friends and earn 20% of their earnings!</p>
+                
+                <div class="share-buttons">
+                    <button class="btn btn-share facebook">Share on Facebook</button>
+                    <button class="btn btn-share twitter">Share on Twitter</button>
+                    <button class="btn btn-share telegram">Share on Telegram</button>
+                </div>
+            </div>
+            
+            <div class="referral-table">
+                <h3>Your Referrals</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Join Date</th>
+                                <th>Status</th>
+                                <th>Total Earned</th>
+                                <th>Your Earnings</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CryptoFan</td>
+                                <td>2023-05-15</td>
+                                <td><span class="status-active">Active</span></td>
+                                <td>0.0021 BTC</td>
+                                <td>0.00042 BTC</td>
+                            </tr>
+                            <tr>
+                                <td>BitcoinLover</td>
+                                <td>2023-04-22</td>
+                                <td><span class="status-active">Active</span></td>
+                                <td>0.0015 BTC</td>
+                                <td>0.00030 BTC</td>
+                            </tr>
+                            <tr>
+                                <td>EthereumKing</td>
+                                <td>2023-03-10</td>
+                                <td><span class="status-inactive">Inactive</span></td>
+                                <td>0.0008 BTC</td>
+                                <td>0.00016 BTC</td>
+                            </tr>
+                            <tr>
+                                <td>AltcoinTrader</td>
+                                <td>2023-06-01</td>
+                                <td><span class="status-active">Active</span></td>
+                                <td>0.0006 BTC</td>
+                                <td>0.00012 BTC</td>
+                            </tr>
+                            <tr>
+                                <td>BlockchainPro</td>
+                                <td>2023-02-18</td>
+                                <td><span class="status-inactive">Inactive</span></td>
+                                <td>0.0012 BTC</td>
+                                <td>0.00024 BTC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="referral-banners">
+                <h3>Promotional Banners</h3>
+                <p>Use these banners to promote CryptoEarn on your website or social media</p>
+                
+                <div class="banner-grid">
+                    <div class="banner-item">
+                        <div class="banner-preview">
+                            <img src="https://via.placeholder.com/468x60?text=CryptoEarn+468x60+Banner" alt="Banner 1">
+                        </div>
+                        <textarea readonly>&lt;a href="https://cryptoearn.com/ref/johndoe"&gt;&lt;img src="https://cryptoearn.com/banners/468x60.png" alt="Earn Free Bitcoin"&gt;&lt;/a&gt;</textarea>
+                    </div>
+                    
+                    <div class="banner-item">
+                        <div class="banner-preview">
+                            <img src="https://via.placeholder.com/728x90?text=CryptoEarn+728x90+Banner" alt="Banner 2">
+                        </div>
+                        <textarea readonly>&lt;a href="https://cryptoearn.com/ref/johndoe"&gt;&lt;img src="https://cryptoearn.com/banners/728x90.png" alt="Earn Free Bitcoin"&gt;&lt;/a&gt;</textarea>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CryptoEarn</h3>
+                <p>The leading PTC cryptocurrency earning platform since 2020.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="ptc-ads.html">View Ads</a></li>
+                    <li><a href="referrals.html">Referrals</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 CryptoEarn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

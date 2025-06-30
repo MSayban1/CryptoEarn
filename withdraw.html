@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdraw - CryptoEarn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard">
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="CryptoEarn Logo">
+                <span>CryptoEarn</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="ptc-ads.html">View Ads</a></li>
+                <li><a href="withdraw.html" class="active">Withdraw</a></li>
+                <li><a href="referrals.html">Referrals</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="homepage.html" class="btn btn-logout">Logout</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="user-profile">
+                <div class="avatar">JD</div>
+                <h3>JohnDoe</h3>
+                <p>Balance: 0.001245 BTC</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="dashboard.html"><span>📊</span> Dashboard</a></li>
+                    <li><a href="ptc-ads.html"><span>🖱️</span> View Ads</a></li>
+                    <li><a href="withdraw.html" class="active"><span>💰</span> Withdraw</a></li>
+                    <li><a href="referrals.html"><span>👥</span> Referrals</a></li>
+                    <li><a href="settings.html"><span>⚙️</span> Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h1>Withdraw Earnings</h1>
+                <p>Request a withdrawal to your FaucetPay account</p>
+            </div>
+            
+            <div class="withdraw-container">
+                <div class="balance-summary">
+                    <h3>Your Balance</h3>
+                    <div class="balance-amount">0.001245 BTC</div>
+                    <p>≈ $42.50 USD</p>
+                    
+                    <div class="min-withdraw">
+                        <span>ℹ️</span>
+                        <p>Minimum withdrawal amount: 0.0005 BTC (≈ $17.00)</p>
+                    </div>
+                </div>
+                
+                <div class="withdraw-form">
+                    <h3>Withdrawal Request</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="payment-method">Payment Method</label>
+                            <select id="payment-method" name="payment-method" required>
+                                <option value="">Select payment method</option>
+                                <option value="faucetpay" selected>FaucetPay (BTC)</option>
+                                <option value="faucetpay-eth">FaucetPay (ETH)</option>
+                                <option value="faucetpay-ltc">FaucetPay (LTC)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="wallet-address">FaucetPay Email</label>
+                            <input type="email" id="wallet-address" name="wallet-address" placeholder="your@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="amount">Amount (BTC)</label>
+                            <input type="number" id="amount" name="amount" min="0.0005" max="0.001245" step="0.000001" placeholder="0.001245" required>
+                            <div class="amount-slider">
+                                <input type="range" min="0.0005" max="0.001245" step="0.000001" value="0.001245">
+                            </div>
+                            <div class="amount-options">
+                                <button type="button" class="btn-amount" data-amount="0.0005">Min</button>
+                                <button type="button" class="btn-amount" data-amount="0.001">0.001</button>
+                                <button type="button" class="btn-amount" data-amount="0.001245">Max</button>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block">Request Withdrawal</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="withdraw-history">
+                <h3>Withdrawal History</h3>
+                <div class="history-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Method</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023-06-15</td>
+                                <td>0.0012 BTC</td>
+                                <td>FaucetPay (BTC)</td>
+                                <td class="status-completed">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>2023-06-01</td>
+                                <td>0.0008 BTC</td>
+                                <td>FaucetPay (BTC)</td>
+                                <td class="status-completed">Completed</td>
+                            </tr>
+                            <tr>
+                                <td>2023-05-20</td>
+                                <td>0.0006 BTC</td>
+                                <td>FaucetPay (BTC)</td>
+                                <td class="status-completed">Completed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CryptoEarn</h3>
+                <p>The leading PTC cryptocurrency earning platform since 2020.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="ptc-ads.html">View Ads</a></li>
+                    <li><a href="withdraw.html">Withdraw</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 CryptoEarn. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
